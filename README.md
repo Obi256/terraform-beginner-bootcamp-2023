@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Terraform Beginner Bootcamp 2023
 
 ## semantic versioning
@@ -47,6 +48,54 @@ If we are using a script in gitpod.yml we need to point the script to a pogram t
 in order to make our bash scripts executable we need to change linux permission for the fix to be executable at the user level.
 
 https://en.wikipedia.org/wiki/Chmod
+
+### Working with Env Vars 
+
+We can list out all Envionemnt Variables using the `env` command 
+
+We can filter specific env vars using grep eg. `env| grep AWS_`
+
+### Setting and Unsetting Env Vars
+
+In the terminal we can set using `export HELLO='world`
+
+In the terminal we unset using `unset HELLO`
+
+We can set an env var temporarily when just running a command 
+
+```
+HELLO='world'
+```
+Within a bash script we can set env without wiritng export eg.
+
+```sh
+#!/usr/bin/env bash
+HELLO='world'
+
+echo $HELLO
+```
+
+## Printing Vars 
+
+We can print an env var using echo eg. `echo $HELLO`
+
+### Scoping of Env Vars 
+
+When you open up new bash terminals in VScode it will not be aware of env vars that you ahve set in another window.
+
+If you want to Env Vars to presist across all future bash terminals that are open you need to set env vars in your bash profile. eg. `.bashprofile`
+
+### Persisting Env Vars in Gitpod
+
+We can persist env vars into gitpod by storing them in Gitpod secretes Storage.
+
+```
+gp env HELLO='world'
+```
+
+All Future workspaces launched will set the env vars for all bash terminals opened in those workspaces.
+
+You can also set env vars in the `.gitpodyml` but this can only be non sensitive env vars.
 
 
 https://en.wikipedia.org/wiki/Shebang_(Unix)
