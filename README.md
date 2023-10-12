@@ -104,3 +104,14 @@ https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 https://en.wikipedia.org/wiki/Shebang_(Unix)
 https://en.wikipedia.org/wiki/Chmod
+
+### Aws CLI Installaion 
+
+Aws cli is intalled for this project via the bash script [`./bin/install_aws_cli](./bin/install_aws_cli)
+
+-[Getting started install(AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+we can check if our AWS credentials are configured correctly by running the following AWS CLI command:
+```sh
+aws sts get-caller-identity
+```
