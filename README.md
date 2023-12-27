@@ -115,3 +115,33 @@ we can check if our AWS credentials are configured correctly by running the foll
 ```sh
 aws sts get-caller-identity
 ```
+
+## Terraform Basics 
+
+## Terraform Registry 
+
+Terrafrom sources their modules from the Terraform registry which located at registry [terraform.io](https://registry.terraform.io/)
+
+- **Providers** is an interface to APIs that allow you to make resources in terrafrorm
+- **Modules** are a way to make large amounts of terrafrom code modular, portable and shareable.
+
+## Terraform Console 
+
+We can see a list of all the terrafrom commands by simply typing `terraform`
+
+
+### Terraform Init
+
+At the start of a new project we will run `terraform init` to download the binaries for the terraform providers that we'll use in this project 
+
+[Random Terrafrom Provider](https://registry.terraform.io/providers/hashicorp/aws/latest)
+
+## Terrafrom Plan
+
+This will generate out a changeset, about the state of our infastructure and what will be changed.
+
+We can output this changeset ie. "plan" to be passed to an apply, but often you can just ingnore.
+
+### Terraform Apply 
+`Terrafrom Apply`
+Thisd will run a plan and pass the changeset to be executed by terrafrom. Apply shpould Prompt us a yes or no. If we want to automatically approve, we can use "auto approve" or `terraform apply--auto-approve`

@@ -1,7 +1,21 @@
+terraform {
+  required_providers {
+    random = {
+      source = "hashicorp/random"
+      version = "3.6.0"
+    }
+  }
+}
 
-you are a piece of work 
-my name is marty mar and i like tutles beccasue they have the cbest looking necks in the game and i also like them because they are espeicially 
-smart and cunning and very worth of being in the animal kingdom i dont knoew if they have any natural known predators because i blielice that 
-evryone is very fond of them 
-blah blah blah 
-blah blah blah again 
+provider "random" {
+  # Configuration options
+}
+
+resource "random_string" "bucket_name" {
+  length           = 16
+  special          = false
+}
+
+output "random_bucket_name_id" {
+  value = random_string.bucket_name.result
+}
