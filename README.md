@@ -145,3 +145,6 @@ We can output this changeset ie. "plan" to be passed to an apply, but often you 
 ### Terraform Apply 
 `Terrafrom Apply`
 Thisd will run a plan and pass the changeset to be executed by terrafrom. Apply shpould Prompt us a yes or no. If we want to automatically approve, we can use "auto approve" or `terraform apply--auto-approve`
+
+## Terraform Destroy 
+Command is executed to terminate all resources that are being used.
